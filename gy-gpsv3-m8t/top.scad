@@ -18,7 +18,7 @@ WW=6;
 translate([0,0,T]) {
     
 difference() {
-cube_center([25+T,25+T,4]);
+cube_center([25+1.4*T,25+1.4*T,4]);
 cube_center([25.2,25.2,4]);
 cube_center([2,40,4]);
     
@@ -50,7 +50,7 @@ minkowski() {
   cylinder(d=.001,h=5*T,$fn=16,center=true);
 }
 
-translate([0,30,0])
+translate([0,30,-.01])
 cube_center([8,50,3]);
 }
 
