@@ -20,8 +20,8 @@ module footprint() {
 linear_extrude(height = .0001, center = true, convexity = 10, twist = 0)
 polygon(points=[
   [-W/2,-L/2],[W/2,-L/2],[W/2,L/2],
-  [EW/2,L/2+EL],
-  [-EW/2,L/2+EL],
+  [W/2,L/2+EL],
+  [-W/2,L/2+EL],
   [-W/2,L/2]
   ]);
     
@@ -54,9 +54,13 @@ cylinder(d=WW,h=50,$fn=64);
 
 translate([-SW/2,-SL/2,-.01])
 cylinder(d1=6,d2=3.4,h=T+.02,$fn=32);
+translate([-SW/2,SL/2+EL,-.01])
+cylinder(d1=6,d2=3.4,h=T+.02,$fn=32);
 translate([-SW/2,SL/2,-.01])
 cylinder(d1=6,d2=3.4,h=T+.02,$fn=32);
 translate([SW/2,-SL/2,-.01])
+cylinder(d1=6,d2=3.4,h=T+.02,$fn=32);
+translate([SW/2,SL/2+EL,-.01])
 cylinder(d1=6,d2=3.4,h=T+.02,$fn=32);
 translate([SW/2,SL/2,-.01])
 cylinder(d1=6,d2=3.4,h=T+.02,$fn=32);
